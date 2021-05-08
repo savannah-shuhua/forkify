@@ -9,6 +9,7 @@ import addRecipeView from './views/addRecipeView.js';
 
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
+import { slice } from 'core-js/core/array';
 
 if (module.hot) {
   module.hot.accept();
@@ -123,6 +124,10 @@ const controlAddRecipe = async function (newRecipe) {
     console.error('💥', err);
     addRecipeView.renderError(err.message);
   }
+};
+
+const init = function () {
+  console.log('Welcome to the application!');
 };
 
 const init = function () {
